@@ -1,0 +1,17 @@
+{
+  "name": "env-task-2",
+  "version": "1.0.0",
+  "description": "Cамостоятельно - на основе jsonplaceholder реализуем CRUD для постов - получаем все посты - получаем конкретный пост - создаем пост - редактируем пост - удаляем пост - получаем посты пользователя",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.education.tbank.ru:js-base-summer-2025/Students/sulayev.vladimir/Labs/env-task-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
