@@ -1,6 +1,5 @@
-import { faker } from '@faker-js/faker';
-
-import { validatePost } from '../solution';
+const { faker } = require('@faker-js/faker');
+const { validatePost } = require('../solution.js');
 
 describe('validatePost', () => {
   const validPost = {
