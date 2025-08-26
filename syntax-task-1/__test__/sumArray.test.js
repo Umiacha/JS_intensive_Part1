@@ -1,4 +1,4 @@
-import { sumArray } from "../solution"
+import { sumArray } from "../solution.js"
 
 describe('sumArray', () => {
     it('Проверяет что аргумент - массив', () => {
