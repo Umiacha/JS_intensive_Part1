@@ -1,0 +1,22 @@
+{
+  "name": "unit-test-task",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node tasks/labyrinths/start.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.3",
+    "@types/jest": "^29.5.12"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "msw": "^2.4.1"
+  }
+}
