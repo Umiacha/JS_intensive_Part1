@@ -1,0 +1,15 @@
+/*
+    Реализуйте тип MyReadonly<Type>, который работает аналогично встроенному Readonly.
+    Тип MyReadonly должен делать все свойства переданного типа только для чтения (readonly).
+
+    Пример:
+        interface User {
+            name: string;
+            age: number;
+        }
+
+        type ReadonlyUser = MyReadonly<User>;
+        // Ожидается: { readonly name: string; readonly age: number }
+*/
+
+type MyReadonly<Type> = /* ваш код здесь */

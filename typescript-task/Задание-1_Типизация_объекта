@@ -1,0 +1,27 @@
+/*
+Задание:
+
+    Опишите интерфейс Card для объектов в массиве cards и используйте его для типизации массива и функции logCard.
+*/
+
+export type Card = unknown;
+
+export const cards: unknown[] = [
+    {
+        cardNumber: '1234 5678 9012 3456',
+        owner: 'Ivan Petrov',
+        balance: 15000
+    },
+    {
+        cardNumber: '9876 5432 1098 7654',
+        owner: 'Anna Smirnova',
+        balance: 500
+    }
+];
+
+export function logCard(card: unknown) {
+    console.log(` - ${card.cardNumber}, ${card.owner}, ${card.balance}₽`);
+}
+
+console.log('Карты:');
+cards.forEach(logCard);

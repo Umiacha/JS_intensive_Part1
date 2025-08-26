@@ -1,0 +1,49 @@
+/*
+    Теперь у нас есть разные типы банковских карт — дебетовые и кредитные.
+    Благодаря свойству "type" их можно различать.
+    Реализуйте функции isDebitCard и isCreditCard, которые будут проверять тип карты.
+*/
+
+interface DebitCard {
+    type: 'debit';
+    cardNumber: string;
+    owner: string;
+    balance: number;
+}
+
+interface CreditCard {
+    type: 'credit';
+    cardNumber: string;
+    owner: string;
+    creditLimit: number;
+    currentDebt: number;
+}
+
+export type Card = DebitCard | CreditCard;
+
+export const cards: Card[] = [
+    { type: 'debit', cardNumber: '1234 5678 9012 3456', owner: 'Ivan Petrov', balance: 15000 },
+    { type: 'credit', cardNumber: '9876 5432 1098 7654', owner: 'Anna Smirnova', creditLimit: 50000, currentDebt: 12000 },
+    { type: 'debit', cardNumber: '1111 2222 3333 4444', owner: 'Elena Volkova', balance: 500 },
+    { type: 'credit', cardNumber: '2222 3333 4444 5555', owner: 'Pavel Ivanov', creditLimit: 30000, currentDebt: 5000 }
+];
+
+
+export function logCard(card: Card) {
+    let additionalInfo: string = '';
+    if (isDebitCard(card)) {
+        additionalInfo = `${card.balance}₽`;
+    }
+    if (isCreditCard(card)) {
+        additionalInfo = `Limit: ${card.creditLimit}₽, Debt: ${card.currentDebt}₽`;
+    }
+    console.log(` - ${card.cardNumber}, ${card.owner}, ${additionalInfo}`);
+}
+
+console.log('Credit cards:');
+cards.filter(isCreditCard).forEach(logCard);
+
+console.log();
+
+console.log('Debit cards:');
+cards.filter(isDebitCard).forEach(logCard);

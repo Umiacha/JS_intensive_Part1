@@ -1,0 +1,19 @@
+/*
+    Реализуйте тип MyPick<Type, Keys>, который работает аналогично встроенному Pick.
+    Тип MyPick должен создавать новый тип, содержащий только указанные свойства Keys из исходного типа Type.
+
+    Пример:
+        interface Person {
+            name: string;
+            age: number;
+            city: string;
+        }
+
+        type PersonName = MyPick<Person, 'name'>;
+        // Ожидается: { name: string }
+
+        type PersonNameAndCity = MyPick<Person, 'name' | 'city'>;
+        // Ожидается: { name: string; city: string }
+*/
+
+type MyPick<Type, Keys extends keyof Type> = /* ваш код здесь */

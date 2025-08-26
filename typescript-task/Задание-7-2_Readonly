@@ -1,0 +1,28 @@
+/*
+    Реализуйте тип MyDeepReadonly<Type>, который рекурсивно делает все свойства объекта только для чтения (readonly).
+    Если свойство также является объектом или массивом, его свойства тоже должны стать только для чтения.
+
+    Пример:
+        interface User {
+            name: string;
+            address: {
+                city: string;
+                coords: [number, number];
+            };
+        }
+
+        type ReadonlyUser = MyDeepReadonly<User>;
+        // Ожидается:
+        // {
+        //   readonly name: string;
+        //   readonly address: {
+        //     readonly city: string;
+        //     readonly coords: readonly [number, number];
+        //   };
+        // }
+
+    Подсказка:
+        Используйте дженерики, mapped types, условные типы и рекурсию.
+*/
+
+type MyDeepReadonly<Type> = /* ваш код здесь */
